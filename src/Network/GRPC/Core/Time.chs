@@ -1,10 +1,13 @@
 module Network.GRPC.Core.Time where
 
+-- #if !MIN_VERSION_base(4,8,0)
 import Control.Applicative
+-- #endif
 import Control.Monad
 import Foreign.C.Types
 import Foreign.Storable
 import System.Clock
+import Prelude
 
 #include <grpc/support/time.h>
 
